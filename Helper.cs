@@ -30,7 +30,7 @@ namespace UnityExplorerHelper_VRC
 
                 var UE_UI_Handler = GameObject.Find("UniverseLibCanvas").transform.Find("com.sinai.unityexplorer_Root").gameObject.AddComponent<ObjectHandler>();
 
-                UE_UI_Handler.OnEnabled += _ =>
+                UE_UI_Handler.OnUpdateEachSecond += (_, _) =>
                 {
                     VRCInputManager.Method_Public_Static_Void_Boolean_0(true);
                     ButtonAPI.GetQuickMenuInstance().field_Private_Boolean_5 = true;
